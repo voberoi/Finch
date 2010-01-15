@@ -7,6 +7,13 @@
     ALuint source, buffer;
     double length;
     float gain;
+
+	ALvoid *data;
+	ALsizei size;
+	ALenum format;
+	ALsizei frequency;
+	int iBytesPerSample;
+	int lastPos;
 }
 
 // Sound length in seconds.
@@ -19,6 +26,7 @@
 @property(assign) float gain;
 
 - (void) play;
+- (void) playFrom:(double)fPos;
 - (void) stop;
 
 @end
