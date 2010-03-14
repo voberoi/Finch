@@ -12,6 +12,7 @@ enum SoundError {
     BOOL loop;
     ALuint source, buffer;
     float gain, pitch;
+    double length;
 }
 
 // Sound length in seconds.
